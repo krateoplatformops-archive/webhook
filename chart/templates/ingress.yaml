@@ -14,6 +14,6 @@ spec:
             pathType: Prefix
             backend:
               service:
-                name: webhook-svc
+                name: webhook-service
                 port:
                   number: 80

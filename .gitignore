@@ -130,3 +130,4 @@ dist
 .pnp.*
 .dccache
 nodemon.json
+chart/krateo.values.yaml

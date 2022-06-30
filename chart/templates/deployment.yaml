@@ -15,17 +15,17 @@ spec:
         name: webhook
     spec:
       containers:
-        envFrom:
-          - configMapRef:
-              name: webhook-config
-        - env:
+        - name: webhook
+          imagePullPolicy: Always
+          image: 'ghcr.io/krateoplatformops/webhook:latest'
+          envFrom:
+            - configMapRef:
+                name: webhook-config
+          env:
             - name: PORT
               value: '8080'
             - name: LOG_LEVEL
               value: 'info'
-          imagePullPolicy: Always
-          image: 'ghcr.io/krateoplatformops/webhook:latest'
-          name: webhook
           ports:
             - containerPort: 8080
           resources:
