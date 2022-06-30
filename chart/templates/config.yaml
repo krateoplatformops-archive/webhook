@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: webhook-config
+data:
+  DISCORD_WEBHOOK: {{ .Values.discord_webhook | quote }}
+  API_TOKEN: {{ .Values.api_token | quote }}

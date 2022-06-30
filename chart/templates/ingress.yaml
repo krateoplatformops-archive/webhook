@@ -1,0 +1,19 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: webhook-ingress
+  labels:
+  annotations:
+    kubernetes.io/ingress.class: 'kong'
+spec:
+  rules:
+    - host: webhook.krateo.io
+      http:
+        paths:
+          - path: /*
+            pathType: Prefix
+            backend:
+              service:
+                name: webhook-svc
+                port:
+                  number: 80
