@@ -1,4 +1,5 @@
 const axios = require('axios').default
+const { logger } = require('./logger.helpers')
 
 const { discordConstants } = require('../constants')
 
