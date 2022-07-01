@@ -2,6 +2,7 @@ const express = require('express')
 const router = express.Router()
 
 const { discordPublish } = require('../helpers/discord.helpers')
+const { twitterPublish } = require('../helpers/twitter.helpers')
 
 router.post('/', async (req, res, next) => {
   try {
@@ -9,6 +10,7 @@ router.post('/', async (req, res, next) => {
     const tag = req.body.tag
 
     await discordPublish(prj, tag)
+    await twitterPublish(prj, tag)
 
     res.status(200).json({ message: 'ok' })
   } catch (err) {

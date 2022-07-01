@@ -1,2 +1,6 @@
-discord_webhook: ""
 api_token: ""
+discord_webhook: ""
+twitter_api_key: ""
+twitter_api_secret: ""
+twitter_access_token: ""
+twitter_access_secret: ""

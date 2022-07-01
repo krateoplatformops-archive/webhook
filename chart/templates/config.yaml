@@ -3,5 +3,9 @@ kind: ConfigMap
 metadata:
   name: webhook-config
 data:
-  DISCORD_WEBHOOK: {{ .Values.discord_webhook | quote }}
   API_TOKEN: {{ .Values.api_token | quote }}
+  DISCORD_WEBHOOK: {{ .Values.discord_webhook | quote }}
+  TWITTER_API_KEY: {{ .Values.twitter_api_key | quote }}
+  TWITTER_API_SECRET: {{ .Values.twitter_api_secret | quote }}
+  TWITTER_ACCESS_TOKEN: {{ .Values.twitter_access_token | quote }}
+  TWITTER_ACCESS_SECRET: {{ .Values.twitter_access_secret | quote }}
